@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Songs } from '../../interfaces/songs';
+import { SongsService } from '../../services/songs.service';
 
 @Component({
   selector: 'app-content',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content.component.scss']
 })
 export class ContentComponent implements OnInit {
+  
+  songs: Songs[] = [];
 
-  constructor() { }
+  constructor(public songsService: SongsService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.songsService.getSongs().subscribe((data: Songs[])=>{
+      console.log(data);
+      this.songs = data;
+    })
   }
 
 }

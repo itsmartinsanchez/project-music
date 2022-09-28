@@ -1,45 +1,78 @@
 {
-    "artist": [
-        {
-            "id": 1,
-            "name": "Artist 1",
-            "genre": "R&B/Pop"
-
-        },
-        {
-            "id": 2,
-            "name": "Artist 2",
-            "genre": "Hiphop/Rap"
-
-        },
-        {
-            "id": 3,
-            "name": "Aritst 3",
-            "genre": "Rock"
-
-        }
-    ],
-    "songs":[
-        {
-            "id":1,
-            "album": "Album 1",
-            "artistId": 1,
-            "title": "Song Title",
-            "lyrics": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        },
-        {
-            "id":2,
-            "album": "Album 2",
-            "artistId": 2,
-            "title": "Song Title",
-            "lyrics": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."   
-        },
-        {
-            "id":3,
-            "album": "Album 3",
-            "artistId": 3,
-            "title": "Song Title",
-            "lyrics": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        }
-    ]
+  "artist": [
+    {
+      "id": 1,
+      "name": "Artist 1",
+      "genre": "R&B/Pop"
+    },
+    {
+      "id": 2,
+      "name": "Artist 2",
+      "genre": "Hiphop/Rap"
+    },
+    {
+      "id": 3,
+      "name": "Aritst 3",
+      "genre": "Rock"
+    }
+  ],
+  "songs": [
+    {
+      "id": 1,
+      "album": "Album 1",
+      "artistId": 1,
+      "title": "Die For You",
+      "lyrics": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "id": 2,
+      "album": "Album 2",
+      "artistId": 2,
+      "title": "Waves",
+      "lyrics": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "id": 3,
+      "album": "Album 3",
+      "artistId": 3,
+      "title": "Ghost Town",
+      "lyrics": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "artistName": "Adele",
+      "title": "Hello ",
+      "lyrics": "Hello, it's me\nI was wondering if after all these years you'd like to meet\nTo go over everything\nThey say that time's supposed to heal ya, but I ain't done much healing\nHello, can you hear me?\nI'm in California dreaming about who we used to be\nWhen we were younger and free\nI've forgotten how it felt before the world fell at our feet\nThere's such a difference between us\nAnd a million miles\nHello from the other side\nI must've called a thousand times\nTo tell you I'm sorry for everything that I've done\nBut when I call, you never seem to be home\nHello from the outside\nAt least I can say that I've tried\nTo tell you I'm sorry for breaking your heart\nBut it don't matter, it clearly doesn't tear you apart anymore\nHello, how are you?\nIt's so typical of me to talk about myself, I'm sorry\nI hope that you're well\nDid you ever make it out of that town where nothing ever happened?\nIt's no secret that the both of us\nAre running out of time\nSo hello from the other side (other side)\nI must've called a thousand times (thousand times)\nTo tell you I'm sorry for everything that I've done\nBut when I call, you never seem to be home\nHello from the outside (outside)\nAt least I can say that I've tried (I've tried)\nTo tell you I'm sorry for breaking your heart\nBut it don't matter, it clearly doesn't tear you apart anymore\nOoh (lows, lows, lows, lows), anymore\n(Highs, highs, highs, highs)\nOoh (lows, lows, lows, lows), anymore\n(Highs, highs, highs, highs)\nOoh (lows, lows, lows, lows), anymore\n(Highs, highs, highs, highs)\nAnymore (lows, lows, lows, lows)\nHello from the other side (other side)\nI must've called a thousand times (thousand times)\nTo tell you I'm sorry for everything that I've done\nBut when I call, you never seem to be home\nHello from the outside (outside)\nAt least I can say that I've tried (I've tried)\nTo tell you I'm sorry for breaking your heart\nBut it don't matter, it clearly doesn't tear you apart anymore",
+      "id": 7
+    },
+    {
+      "artistName": "Mariah Carey",
+      "title": "Shake It Off",
+      "lyrics": "Ooh, ooh\nOoh, ooh\nOoh, ooh\nEverybody just\nEverybody just bounce, bounce\nCheck it out\nOoh, ooh\nOoh, ooh\nOoh, ooh\nEverybody just\nEverybody just bounce, bounce\n'Cause the lovin' ain't the same and you keep on playing games\nLike you know I'm here to stay\n(I gotta shake, shake you off)\nJust like the Calgon commercial, I\nReally gotta get up outta here\nAnd go somewhere\n(I gotta shake you off)\nGotta make that move\nFind somebody who\nAppreciates all the love I give\nBoy, I gotta (shake, shake you off)\nGotta do what's best for me\nBaby, and that means I gotta\n(Shake you off)\nBy the time you get this message, it's gonna be too late\nSo don't bother paging me 'cause I'll be on my way\nSee, I grabbed all my diamonds and clothes\nJust ask your momma she knows\nYou're gonna miss me, baby\nHate to say I told you so\nWell, at first I didn't know, but now it's clear to me\nYou would cheat with all your freaks and lie compulsively\nSo I packed up my Louis Vuitton\nJumped in your ride and took off\nYou'll never ever find a girl who loves you more than me\n'Cause the loving ain't the same and you keep on playing games\nLike you know I'm here to stay\n(I gotta shake, shake you off)\nJust like the Calgon commercial, I\nReally gotta get up outta here\nAnd go somewhere\n(I gotta shake you off)\nGotta make that move\nFind somebody who\nAppreciates all the love I give\nBoy, I gotta (shake, shake you off)\nGotta do what's best for me\nBaby, and that means I gotta\n(Shake you off)\nShake, shake, shake, shake, shake it off\nShake, shake, shake, shake, shake it off\n(I'm gonna shake it off)\nShake, shake, shake, shake, shake it off\nShake, shake, shake, shake, shake it off\nI found out about a gang of your dirty little deeds\nWith this one and that one by the pool\nOn the beach, in the streets\nHeard y'all was\nHold up my phone's breakin' up\nI'ma hang up and call the machine right back\nI gotta get this off of my mind\nYou wasn't worth my time\nSo I'm leaving you behind\nYeah, 'cause I need a real love in my life\nSave this recording because\nI'm never coming back home\nBaby, I'm gone, don't ya know?\n'Cause the loving ain't the same and you keep on playing games\nLike you know I'm here to stay\n(I gotta shake, shake you off)\nJust like the Calgon commercial, I\nReally gotta get up outta here\nAnd go somewhere\n(I gotta shake you off)\nGotta make that move\nFind somebody who\nAppreciates all the love I give\nBoy, I gotta (shake, shake you off)\nGotta do what's best for me\nBaby, and that means I gotta\n(Shake you off)\nShake, shake, shake, shake, shake it off\nShake, shake, shake, shake, shake it off\n(I'm gonna shake it off)\nShake, shake, shake, shake, shake it off\nShake, shake, shake, shake, shake it off\nI just gotta shake it off\n'Cause the loving ain't the same and you keep on playing games\nLike you know I'm here to stay\n(I gotta shake, shake you off)\nJust like the Calgon commercial\nI really gotta get up outta here\nAnd go somewhere\n(I gotta shake you off)\nGotta make that move\nFind somebody who\nAppreciates all the love I give (I like that, y'all)\nI gotta shake, shake it off\nGotta do what's best for me\nBaby, and that means I gotta\nShake it off (Shake you off)\nI gotta shake you off (Ooh, ooh, ooh)\n(Everybody just, everybody just bounce, bounce)\nI gotta shake, shake you off (Ooh, ooh, ooh)\n(Everybody just, everybody just bounce, bounce)\nI gotta shake you off",
+      "id": 10
+    },
+    {
+      "artistName": "The Weeknd",
+      "title": "Save Your Tears",
+      "lyrics": "Ooh\nNa-na, yeah\nI saw you dancing in a crowded room\nYou look so happy when I'm not with you\nBut then you saw me, caught you by surprise\nA single teardrop falling from your eye\nI don't know why I run away\nI'll make you cry when I run away\nYou could've asked me why I broke your heart\nYou could've told me that you fell apart\nBut you walked past me like I wasn't there\nAnd just pretended like you didn't care\nI don't know why I run away\nI'll make you cry when I run away\nTake me back 'cause I wanna stay\nSave your tears for another\nSave your tears for another day\nSave your tears for another day\nSo, I made you think that I would always stay\nI said some things that I should never say\nYeah, I broke your heart like someone did to mine\nAnd now you won't love me for a second time\nI don't know why I run away, oh, girl\nSaid I'll make you cry when I run away\nGirl, take me back 'cause I wanna stay\nSave your tears for another\nI realize that I'm much too late\nAnd you deserve someone better\nSave your tears for another day (ooh, yeah)\nSave your tears for another day (yeah)\nI don't know why I run away\nI'll make you cry when I run away\nSave your tears for another day, ooh, girl (ah)\nI said save your tears for another day (ah)\nSave your tears for another day (ah)\nSave your tears for another day (ah)",
+      "id": 11
+    },
+    {
+      "artistName": "Mac Miller",
+      "title": "Blue World",
+      "lyrics": "It's a blue world without you\nIt's a blue world alone\nYeah, well, this mad world made me crazy\nMight just turn around, do 180\nI ain't politickin', I ain't kissin' no babies\nThe devil on my doorstep bein' so shady\nMmm, don't trip\nWe don't gotta let him in, don't trip\nYeah, yeah\nI let it go, but I never go with it\nUh, yeah\nOkay, cool as fall weather\nFuck the bullshit, I'm here to make it all better\nWith a little music for you\nI don't do enough for you\nWithout you, it's the color blue\nOoh, don't trip\nI was in the city, they was talkin' that shit\nHad the homies with me, all a sudden, they split\nWe ain't even worried, we just laughin', that's rich\nYou know how it goes, it ain't broke, don't fix\nHey, one of these days we'll all get by\nDon't be afraid, don't fall\nThink I lost my mind, reality's so hard to find\nWhen the devil tryna call your line, but shit, I always shine\nEven when the light dim\nNo, I ain't God, but I'm feelin' just like Him\nOoh, don't trip\nSee, I was in the whip, ridin', me and my bitch\nWe was listenin' to us, no one else, that's it\nThat's a flex, just a bit, let me talk my shit\nSay my hand got bit\nYeah, well, this mad world made me crazy\nMight just turn around, do 180\nI ain't politickin', I ain't kissin' no babies\nThe devil on my doorstep bein' so shady\nMmm, don't trip\nWe don't gotta let him in, don't trip\nYeah, yeah\nI let it go, but I never go with it\nUh\nDon't trip\nDon't trip\nDon't trip\nWell, if you could see me now\nLove me and hold me down\nMy mind, it goes, it goes\nIt goes, it goes, it goes\nWell, this mad world made me crazy\nMight just turn around, do 180\nI ain't politickin', I ain't kissin' no babies\nThe devil on my doorstep bein' so shady\nMmm, don't trip\nWe don't gotta let him in, don't trip\nYeah, yeah\nI let it go, but I never go with it\nUh\nHey, one of these days we'll all get by\nDon't be afraid, don't fall in line",
+      "id": 12
+    },
+    {
+      "artistName": "Sza",
+      "title": "Broken Clocks",
+      "lyrics": "Run fast from my day job\nRunnin' fast from the way it was\nJump quick to a pay check\nRunnin' back to the strip club\nI'm never going back, never going back\nNo you can't make me\nNever going back, never going back (Nah)\nThey never take me (Yeah)\nI've paid enough of petty dues\nI've had enough of shitty news\nI've had a thing for dirty shoes since I was 10\nLove dirty men alike\nOoh\nBetter day than yesterday (Keep cuttin' up)\nOoh oh\nI just take it day by day\nOoh oh oh\nNever hearing what they say\nOoh ooh\nI just do it my way\nAll I got is these broken clocks\nI ain't got no time\nJust burning daylight\nStill love and it's still love, and it's still love\nIt's still love, still love (Still lovin'), still love\nIt's still love but it's still love\nNothin' but love for you (Nothin' but)\nNothin' but love (Nothin' but)\nNothin' but love\nAll that I've got, pieces and pages\nTalking a lot, sorry I'm faded\nThink I've forgot, you love me\nYou love me\nYou love me\nGot a shift at 10 a.m\nGotta dip at 10 p.m\nGotta get that cash\nWon't get past the lunch break\nI ain't had a smoke break\nIn about two days don't break\nBeen about three years since I dated you\nWhy you still talking 'bout me like we together?\nI moved on for the better\nYou moved on to whoever\nI was down for whatever and then some\nYou gon' make me late to work again\nOoh\nBetter day than yesterday\nOoh oh\nI just take it day by day\nOoh oh oh\nNever hearing what they say\nOoh ooh\nI just do it my way (Just do it)\nAll I got is these broken clocks\nI ain't got no time\nJust burning daylight\nStill love and it's still love, and it's still love\nIt's still love, still love, still love (Still lovin')\nIt's still love but it's still love (Still lovin')\nNothin' but love for you\nNothin' but love (Nothin' but)\nNothin' but love\nI don't eat, can't sleep past 9 a.m\nHeartbeat make me feel young again (Like a snail, like a)\nCan't beat em just join the party (Come and join the party)\nI don't wanna, don't need nobody\nAll that I've got, pieces and pages\nTalking a lot, sorry I'm faded\nThink I've forgot, you love me\nYou love me\nYou love me\nYou love me\nYou love me\nYou love me",
+      "id": 13
+    },
+    {
+      "artistName": "fd",
+      "title": "gfg",
+      "lyrics": "gfgdfdg",
+      "id": 14
+    }
+  ]
 }

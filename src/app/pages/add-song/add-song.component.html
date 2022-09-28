@@ -1,1 +1,30 @@
-<p>add-song works!</p>
+<form [formGroup]="songsForm" (ngSubmit)="submitSong()" novalidate>
+<h1>Add A New Song</h1>
+<div class="form-group">
+    <label> Artist </label>
+    <input 
+    type="text" 
+    class="form-control"
+    formControlName="artistName"
+    />
+</div>
+<div class="mt-4"></div>
+<div class="form-group">
+    <label> Title </label>
+    <input 
+    type="text" 
+    class="form-control"
+    formControlName="title"/>
+</div>
+<div class="mt-4"></div>
+<div class="form-group">
+    <label> Lyrics </label>
+    <textarea 
+    class="form-control" 
+    rows="3" formControlName="lyrics"></textarea>
+</div>
+<hr />
+<button class="btn btn-primary" type="submit">
+    Add Song
+</button>
+</form>

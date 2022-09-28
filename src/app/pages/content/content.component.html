@@ -1,7 +1,12 @@
-<body>
-    
-    <div class="container"></div>
-    <p>Lyrics</p>
-    <button> Edit</button>
-
-</body>
+<div class="container-lg">
+    <div class="card" *ngFor="let song of songs">
+        <!-- Fix fetching songs here. It should get the lyrics of a certain song only-->
+        <h4>{{song.title}}</h4>
+        <h6>{{song.artistName}}</h6>
+        <p>{{song.lyrics}}</p>
+    </div>
+    <button class="btn btn-primary">Edit</button>
+    <button class="btn btn-danger">Delete</button>
+    <!-- <button class="btn btn-danger" (click)="songsService.deleteSongs(songs.id)">Delete</button> -->
+</div>
+<app-comments></app-comments>

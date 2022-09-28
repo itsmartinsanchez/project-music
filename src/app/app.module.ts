@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -10,6 +11,10 @@ import { ContentComponent } from './pages/content/content.component';
 import { AddSongComponent } from './pages/add-song/add-song.component';
 import { EditSongComponent } from './pages/edit-song/edit-song.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { IndexComponent } from './pages/index/index.component';
+import { SongsFormComponent } from './components/songs-form/songs-form.component';
+import { CommentsComponent } from './components/comments/comments.component';
+import { UserCommentsComponent } from './components/user-comments/user-comments.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +25,18 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     ContentComponent,
     AddSongComponent,
     EditSongComponent,
-    NavBarComponent
+    NavBarComponent,
+    IndexComponent,
+    SongsFormComponent,
+    CommentsComponent,
+    UserCommentsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
