@@ -15,6 +15,8 @@ import { IndexComponent } from './pages/index/index.component';
 import { SongsFormComponent } from './components/songs-form/songs-form.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { UserCommentsComponent } from './components/user-comments/user-comments.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { UserCommentsComponent } from './components/user-comments/user-comments.
     IndexComponent,
     SongsFormComponent,
     CommentsComponent,
-    UserCommentsComponent
+    UserCommentsComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
