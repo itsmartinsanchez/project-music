@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Songs } from '../../interfaces/songs';
 import { SongsService } from '../../services/songs.service';
+import {Router} from "@angular/router";
 
+//declare var $:any;
 @Component({
   selector: 'app-list-of-contents',
   templateUrl: './list-of-contents.component.html',
@@ -11,7 +13,8 @@ export class ListOfContentsComponent implements OnInit {
 
   songs: Songs[] = [];
 
-  constructor(public songsService: SongsService) { }
+  constructor(public router: Router,
+    public songsService: SongsService) { }
 
   ngOnInit() {
     this.songsService.getSongs().subscribe((data: Songs[])=>{
@@ -19,5 +22,10 @@ export class ListOfContentsComponent implements OnInit {
       this.songs = data;
     })
   }
+
+  contentClick(songs: Songs){
+    //this.songsService.listScrollPos = $("#MainView").scrollTop();
+    this.router.navigate(['/content', songs.id]);
+  } 
 
 }

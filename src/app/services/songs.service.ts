@@ -14,7 +14,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class SongsService {
-  private apiUrl = 'http://localhost:5001/songs';
+  private apiUrl = 'https://localhost:7090/songs';
 
   httpOptions = {
     headers: new HttpHeaders({

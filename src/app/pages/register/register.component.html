@@ -1,1 +1,85 @@
-<p>register works!</p>
+<div class="container">
+  
+    <!-- Add Error handling here -->
+  
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        Register
+      </div>
+        <div class="card-body">
+  
+      <form class="panel-body" name="form1" #form1="ngForm">
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    
+                </div>
+                <input type="text" name="WebLogin_txtUsername"
+                     id="WebLogin_txtUsername"
+                     class="form-control"
+                     placeholder="Enter your username"
+
+                     autocapitalize="off"
+                     autocomplete="off"
+                     spellcheck="false"
+                     autocorrect="off" required />
+
+                     <!--- add[(ngModel)]="username"-->
+            </div>
+        </div>
+  
+        <div class="form-group">
+          <div class="input-group">
+              <div class="input-group-prepend">
+                  
+              </div>
+            <input type="password" name="password"
+                   id="password"
+                   class="form-control"
+                   placeholder="Enter your password"
+                   
+                   autocapitalize="off"
+                   autocomplete="off"
+                   spellcheck="false"
+                   autocorrect="off"
+                   required />
+                   <!--- [(ngModel)]="password"-->
+          </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    
+                </div>
+              <input type="password" name="password"
+                     id="password"
+                     class="form-control"
+                     placeholder="Retype your password"
+                     
+                     autocapitalize="off"
+                     autocomplete="off"
+                     spellcheck="false"
+                     autocorrect="off"
+                     required />
+                     <!--- [(ngModel)]="password"-->
+            </div>
+          </div>
+
+        <hr />
+  
+        <button class="btn btn-primary"
+                type="button"
+                
+                [disabled]="form1.invalid || form1.pristine" >
+          
+          Sign Up
+        </button>
+
+  
+      </form>
+  
+            </div>
+        </div>
+  </div>
+  
