@@ -22,9 +22,10 @@ export class AddSongComponent implements OnInit {
 
   ngOnInit() {
     this.songsForm = this.fb.group({
-      artistName: [''],
+      artistId: [''],
       title: [''],
-      lyrics: ['']
+      lyrics: [''],
+      album: ['']
     })
 
 
@@ -39,7 +40,7 @@ export class AddSongComponent implements OnInit {
   submitSong() {
     this.songsService.saveSongs(this.songsForm.value).subscribe(res => {
       console.log('Song has been added!')
-      //this.router.navigateByUrl('/add-song')
+      this.router.navigateByUrl('/index')
     })
   }
 

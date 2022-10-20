@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'index', component: IndexComponent},
   { path: 'content/:id', component: ContentComponent},
   { path: 'add-song', component: AddSongComponent},
-  {path: 'content/edit/:id', component: EditSongComponent},
+  {path: 'content/:id/edit', component: EditSongComponent},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent}
 ];

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Songs } from '../../interfaces/songs';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SongsService } from '../../services/songs.service';
 
 @Component({
@@ -12,13 +12,17 @@ export class ContentComponent implements OnInit {
   id: any;
   
   song: Songs = {
-    artistName: "",
+    artistId: 0,
     title: "",
     album: "", 
     lyrics: ""
   }
 
-  constructor(private route: ActivatedRoute, public songsService: SongsService) { }
+  constructor(
+     private route: ActivatedRoute,
+     public songsService: SongsService,
+     private router: Router
+     ){ }
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
@@ -26,6 +30,17 @@ export class ContentComponent implements OnInit {
     this.songsService.getSong(this.id).subscribe((s) => {
       this.song = s;
     })
+  }
+
+  //delete function here
+  deleteSong(id:number)
+  {
+    console.log("Deleting.." + id);
+    this.songsService.deleteSongs(id).subscribe((msg) =>{
+    console.log(msg);
+    this.router.navigateByUrl('/index')
+    });
+
   }
 
 }

@@ -1,1 +1,34 @@
-<p>Edit works!</p>
+<form [formGroup]="songsForm" (ngSubmit)="editSong()" novalidate>
+    <h1>Edit Song</h1>
+    <div class="form-group">
+        <label> Artist </label>
+        <input 
+        type="text" 
+        class="form-control"
+        formControlName="artistId"
+        /> 
+    </div>
+    <div class="form-group">
+        <label> Title </label>
+        <input 
+        type="text" 
+        class="form-control"
+        formControlName="title"/> 
+    </div>
+    <div class="form-group">
+        <label> Album </label>
+        <input
+        class="form-control" 
+        formControlName="album"/>
+    </div>
+    <div class="form-group">
+        <label> Lyrics </label>
+        <textarea 
+        class="form-control" 
+        rows="3" formControlName="lyrics"></textarea>
+    </div>
+    <hr />
+    <button class="btn btn-primary" type="submit">
+        Add Song
+    </button>
+    </form>

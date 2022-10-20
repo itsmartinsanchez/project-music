@@ -3,13 +3,13 @@
     <div class="card">
         <h4>{{song.title}}</h4>
         <!-- get artist name by ID-->
-        <h6>{{song.artistName}}</h6>
+        <h6>{{song.artistId}}</h6>
+        <h6>{{song.album}}</h6>
         <p>{{song.lyrics}}</p>
     </div>
     <button class="btn btn-primary">
       <a class="nav-link" routerLink="edit/">Edit</a>
     </button>
-    <button class="btn btn-danger">Delete</button>
-    <!-- <button class="btn btn-danger" (click)="songsService.deleteSongs(songs.id)">Delete</button> -->
+    <button class="btn btn-danger" (click)="deleteSong(id)">Delete</button>
 </div>
 <app-comments></app-comments>

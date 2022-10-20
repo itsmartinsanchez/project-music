@@ -34,9 +34,15 @@ export class SongsService {
     return this.http.post<Songs>(this.apiUrl, JSON.stringify(songs), httpOptions);
   }
 
-  deleteSongs(songs: Songs): Observable<Songs> {
-    const url = `${this.apiUrl}/${songs.id}`;
-    return this.http.delete<Songs>(url);
+  deleteSongs(id: number): Observable<string> {
+    console.log("Deleting song..")
+    const url = `${this.apiUrl}?id=${id}`;
+    return this.http.delete<string>(url);
+  }
+
+  editSongs(songs: Songs): Observable<Songs> {
+    console.log("Editing song...");
+    return this.http.put<Songs>(this.apiUrl, JSON.stringify(songs), httpOptions);
   }
 
   getSong(id: any): Observable<Songs> {
