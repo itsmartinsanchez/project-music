@@ -10,6 +10,8 @@ import { SongsService } from '../../services/songs.service';
 })
 export class ContentComponent implements OnInit {
   id: any;
+  isAdmin: boolean;
+  role:any;
   
   song: Songs = {
     artistId: 0,
@@ -29,7 +31,13 @@ export class ContentComponent implements OnInit {
     //getsong by id
     this.songsService.getSong(this.id).subscribe((s) => {
       this.song = s;
+
+      //get artist name by id
+
+      this.isAuthorized();
     })
+
+
   }
 
   //delete function here
@@ -40,7 +48,18 @@ export class ContentComponent implements OnInit {
     console.log(msg);
     this.router.navigateByUrl('/index')
     });
-
   }
+//check user if can edit and delete
+  isAuthorized(){
+      var listdata= JSON.parse(localStorage.getItem("dataKey") || '{}');
+      const valueRole= listdata.role;
+      this.role=valueRole;
+      if (this.role == "admin"){
+        return this.isAdmin = true; 
+      }
+      else{
+        return this.isAdmin = false;
+      }
+    }
 
 }

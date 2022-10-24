@@ -17,7 +17,7 @@ export class ListOfContentsComponent implements OnInit {
     public songsService: SongsService) { }
 
   ngOnInit() {
-    this.songsService.getSongs().subscribe((data: Songs[])=>{
+      this.songsService.getSongs().subscribe((data: Songs[])=>{
       console.log(data);
       this.songs = data;
     })

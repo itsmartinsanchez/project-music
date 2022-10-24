@@ -1,6 +1,6 @@
-<div class="container">
-  
-    <!-- Add Error handling here -->
+<section>
+<div class="card-body p-5 text-center">
+  <div class="mb-md-5 mt-md-4 pb-5">
   
     <div class="card">
       <div class="card-header bg-primary text-white">
@@ -8,23 +8,22 @@
       </div>
         <div class="card-body">
   
-      <form class="panel-body" name="form1" #form1="ngForm">
         <div class="form-group">
+
             <div class="input-group">
+              
                 <div class="input-group-prepend">
                     
                 </div>
-                <input type="text" name="WebLogin_txtUsername"
-                     id="WebLogin_txtUsername"
+                <input type="text" name="username"
+                     id="username"
                      class="form-control"
                      placeholder="Enter your username"
-
+                     [(ngModel)] = "user.username"
                      autocapitalize="off"
                      autocomplete="off"
                      spellcheck="false"
                      autocorrect="off" required />
-
-                     <!--- add[(ngModel)]="username"-->
             </div>
         </div>
   
@@ -33,17 +32,17 @@
               <div class="input-group-prepend">
                   
               </div>
-            <input type="password" name="password"
+            <input type="password" 
+                   name="password"
                    id="password"
                    class="form-control"
                    placeholder="Enter your password"
-                   
+                   [(ngModel)] = "user.password"
                    autocapitalize="off"
                    autocomplete="off"
                    spellcheck="false"
                    autocorrect="off"
                    required />
-                   <!--- [(ngModel)]="password"-->
           </div>
         </div>
 
@@ -52,34 +51,55 @@
                 <div class="input-group-prepend">
                     
                 </div>
-              <input type="password" name="password"
-                     id="password"
+              <input type="password" name="passwordConfirmation"
+                     id="passwordConfirmation"
                      class="form-control"
                      placeholder="Retype your password"
-                     
+                     [(ngModel)] = "user.passwordConfirmation"
                      autocapitalize="off"
                      autocomplete="off"
                      spellcheck="false"
                      autocorrect="off"
                      required />
-                     <!--- [(ngModel)]="password"-->
             </div>
           </div>
 
+          <p class="text-black-50 mb-2">Choose your Role: </p>
+
+                <div class="custom-control custom-radio">
+                    <input 
+                    id="userRole" 
+                    type="radio" 
+                    class="custom-control-input" 
+                    value="user" 
+                    name="userRole" 
+                    [(ngModel)] = "user.role"
+                    selected>
+                    <label class="custom-control-label" for="user"> User</label>
+                 </div>
+
+                 <div class="custom-control custom-radio">
+                    <input id="adminRole"
+                     type="radio" 
+                     class="custom-control-input" 
+                     value="admin" name="userRole" 
+                     [(ngModel)] = "user.role">
+                    <label class="custom-control-label" for="admin"> Admin</label>
+                 </div>
+
         <hr />
-  
-        <button class="btn btn-primary"
-                type="button"
-                
-                [disabled]="form1.invalid || form1.pristine" >
-          
+        <p> Already have an account? <a class="link-info" routerLink="/login"> Log in</a> </p>
+        <button 
+                  class="btn btn-primary"
+                  type="submit" 
+                  (click) = register()>
           Sign Up
         </button>
-
-  
-      </form>
-  
+        <br>
+        <p>{{formMessage}}</p>  
             </div>
         </div>
   </div>
+</div>
+</section>
   

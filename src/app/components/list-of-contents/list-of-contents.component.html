@@ -3,7 +3,6 @@
 <h2> Browse </h2>
 <div class="mt-4"></div>
 <ul class="list-group" *ngFor="let song of songs" (click)="contentClick(song)" >
-    <!--Fix fetching songs here. It should redirect to new page-->
     <li class="list-group-item">
         <a style="text-decoration-line: none" [routerLink]="['/content/',song.id]">
             <h5 style="color:#800080;">{{song.title}}</h5>

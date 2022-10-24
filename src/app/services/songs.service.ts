@@ -30,8 +30,18 @@ export class SongsService {
   }
 
   saveSongs(songs: Songs): Observable<Songs> {
+    if(!songs.id){
+
     console.log("Adding song...");
-    return this.http.post<Songs>(this.apiUrl, JSON.stringify(songs), httpOptions);
+    return this.http.post<Songs>(this.apiUrl, songs, httpOptions);
+
+    } else {
+
+      //update
+      console.log("Editing song...");
+      const url = `${this.apiUrl}/${songs.id}`;
+      return this.http.put<Songs>(url, songs, httpOptions);
+    }
   }
 
   deleteSongs(id: number): Observable<string> {

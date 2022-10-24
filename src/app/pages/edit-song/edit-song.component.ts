@@ -21,11 +21,21 @@ export class EditSongComponent implements OnInit {
     public songsService: SongsService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+// checking user if can edit
+//PUT VALIDATION HERE
+
+    this.songsForm = this.fb.group({
+      id:[''],
+      artistId: [''],
+      title: [''],
+      lyrics: [''],
+      album: ['']
+    })
   }
 
   editSong() {
-    this.songsService.editSongs(this.songsForm.value).subscribe(res => {
+    this.songsService.saveSongs(this.songsForm.value).subscribe(res => {
       console.log('Song has been edited!')
       this.router.navigateByUrl('/index')
   })

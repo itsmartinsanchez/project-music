@@ -1,15 +1,29 @@
 <div class="container-lg">
+  <div class="center">
     <!-- Don't use ngfor. Selection of certain song -->
     <div class="card">
+      <blockquote class="blockquote text-center">
         <h4>{{song.title}}</h4>
         <!-- get artist name by ID-->
         <h6>{{song.artistId}}</h6>
         <h6>{{song.album}}</h6>
-        <p>{{song.lyrics}}</p>
+        <p class="mb-0">{{song.lyrics}}</p>
+      </blockquote>
     </div>
-    <button class="btn btn-primary">
-      <a class="nav-link" routerLink="edit/">Edit</a>
-    </button>
-    <button class="btn btn-danger" (click)="deleteSong(id)">Delete</button>
+    <br>
+    <div class="btn-right">
+        <button 
+        class="btn btn-primary" 
+        *ngIf="isAdmin">
+          <a class="nav-link" routerLink="edit/">Edit</a>
+        </button>
+        <button 
+        class="btn btn-danger" 
+        *ngIf="isAdmin" 
+        (click)="deleteSong(id)">
+          Delete
+        </button>
+      </div>
+</div>        
 </div>
 <app-comments></app-comments>

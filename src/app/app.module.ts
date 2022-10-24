@@ -17,6 +17,8 @@ import { CommentsComponent } from './components/comments/comments.component';
 import { UserCommentsComponent } from './components/user-comments/user-comments.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { RegisterComponent } from './pages/register/register.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

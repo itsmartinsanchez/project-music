@@ -1,6 +1,6 @@
-<div class="container">
-  
-    <!-- Add Error handling here -->
+<section>
+<div class="card-body p-5 text-center">
+  <div class="mb-md-5 mt-md-4 pb-5">
   
     <div class="card">
       <div class="card-header bg-primary text-white">
@@ -8,9 +8,10 @@
       </div>
         <div class="card-body">
   
-      <form class="panel-body" name="form1" #form1="ngForm">
         <div class="form-group">
+
             <div class="input-group">
+
                 <div class="input-group-prepend">
                     
                 </div>
@@ -18,13 +19,11 @@
                      id="WebLogin_txtUsername"
                      class="form-control"
                      placeholder="Enter your username"
-
+                     [(ngModel)] = "user.username"
                      autocapitalize="off"
                      autocomplete="off"
                      spellcheck="false"
                      autocorrect="off" required />
-
-                     <!--- add[(ngModel)]="username"-->
             </div>
         </div>
   
@@ -37,31 +36,31 @@
                    id="password"
                    class="form-control"
                    placeholder="Enter your password"
-                   
+                   [(ngModel)] = "user.password"
                    autocapitalize="off"
                    autocomplete="off"
                    spellcheck="false"
                    autocorrect="off"
                    required />
-                   <!--- [(ngModel)]="password"-->
           </div>
         </div>
         <hr />
-        <p> No Account? <a class="nav-link" routerLink="/register"> Register here. </a> </p>
+        <p> No Account?
+          <a class="link-info" 
+          routerLink="/register"> 
+          Register here. 
+        </a> 
+        </p>
   
         <button class="btn btn-primary"
-                type="button"
-                
-                [disabled]="form1.invalid || form1.pristine" >
-                <!--(click)="login()"-->
-          
+                type="submit" 
+                (click)=login()>
           Login
         </button>
-
-  
-      </form>
+        <p>{{formMessage}}</p>
   
             </div>
         </div>
   </div>
-  
+</div>
+</section>
