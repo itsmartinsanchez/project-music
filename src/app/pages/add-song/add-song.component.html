@@ -1,31 +1,32 @@
 <form [formGroup]="songsForm" (ngSubmit)="submitSong()" novalidate>
-<h1>Add A New Song</h1>
+    <h2 class="display-6" style="color:#BF40BF;">Add A New Song</h2>
 <div class="form-group">
-    <label> ArtistID </label>
-    <input 
-    type="text" 
-    class="form-control"
-    formControlName="artistId"
-    />
+<label><b> Artist </b>  </label>
+<select [(ngModel)]="selected" formControlName="artistId" style="width: 100%;">
+    <option *ngFor="let artist of artists" [value]="artist.id">
+        {{artist.name}}
+    </option>
+</select>
 </div>
+Can't find the artist? Add them <a routerLink="/add-artist" style="color:#BF40BF;"> here </a> <br>
 <div class="form-group">
-    <label> Title </label>
+    <label> <b> Title </b>  </label>
     <input 
     type="text" 
     class="form-control"
     formControlName="title"/>
 </div>
 <div class="form-group">
-    <label> Album </label>
+    <label> <b> Album </b>  </label>
     <input
     class="form-control" 
     formControlName="album"/>
 </div>
 <div class="form-group">
-    <label> Lyrics </label>
+    <label> <b> Lyrics </b> </label>
     <textarea 
     class="form-control" 
-    rows="3" formControlName="lyrics"></textarea>
+    rows="10" formControlName="lyrics"></textarea>
 </div>
 <hr />
 <button class="btn btn-primary" type="submit">

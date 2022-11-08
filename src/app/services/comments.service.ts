@@ -26,9 +26,14 @@ export class CommentsService {
     return this.http.get<Comments[]>(url);
   }
 
-  getUsernameByUserId(userId: any): Observable<Users[]>{
+  getCommentDetails(songId: any): Observable<Comments[]>{
+    const url = `${this.apiUrl}/songs/comments?songId=${songId}`;
+    return this.http.get<Comments[]>(url);
+  }
+
+  getUsernameByUserId(userId: any): Observable<Users>{
     const url = `"${this.apiUrl}/comments/username?userId="${userId}`
-    return this.http.get<Users[]>(url);
+    return this.http.get<Users>(url);
   }
 
   saveComment(comments: Comments): Observable<Comments>{

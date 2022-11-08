@@ -19,6 +19,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ArtistsComponent } from './pages/artists/artists.component';
+import { ListOfArtistsComponent } from './pages/list-of-artists/list-of-artists.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     CommentsComponent,
     UserCommentsComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ArtistsComponent,
+    ListOfArtistsComponent
   ],
   imports: [
     BrowserModule,

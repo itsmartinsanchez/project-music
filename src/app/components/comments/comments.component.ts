@@ -19,6 +19,8 @@ export class CommentsComponent implements OnInit {
   songId: number;
   userId: any;
   commentForm: FormGroup;
+  token:null;
+  isLoggedIn: boolean;
 
   constructor(public fb: FormBuilder, private route: ActivatedRoute,
     public songsService: SongsService,
@@ -33,7 +35,7 @@ export class CommentsComponent implements OnInit {
 
     this.commentForm = this.fb.group({
       userId: [''],
-      songId: [null],
+      songId: [''],
       rating: [''],
       content: ['']
 
@@ -56,12 +58,27 @@ export class CommentsComponent implements OnInit {
   }
 
   submitComment(){
-
+    this.isAuthenticated();
     console.log(this.commentForm.value);
     this.commentsService.saveComment(this.commentForm.value).subscribe(res =>{
       console.log('Comment has been added!')
       window.location.reload();
     })
+  }
+
+  isAuthenticated()
+  {
+    var listdata= JSON.parse(localStorage.getItem("dataKey") || '{}');
+    const valueToken = listdata.token;
+    this.token=valueToken;
+
+    if (this.token == null || this.token == '' || this.token =="undefined"){
+      this.router.navigateByUrl('/login')
+      return this.isLoggedIn = false; 
+    }
+    else{
+      return this.isLoggedIn = true;
+    }
   }
 
 }

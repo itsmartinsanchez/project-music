@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col">
-		<div ngbDropdown class="d-inline-block">
+		<!--<div ngbDropdown class="d-inline-block">
 			<button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
 				Toggle dropdown
 			</button>
@@ -9,45 +9,51 @@
 				<button ngbDropdownItem>Another Action</button>
 				<button ngbDropdownItem>Something else is here</button>
 			</div>
-		</div>
+		</div> -->
 	</div>
 <form [formGroup]="songsForm" (ngSubmit)="editSong()" novalidate>
-    <h1>Edit Song</h1>
-    
+    <br>
+    <h2 class="display-6" style="color:#BF40BF;">Edit Song</h2>
+    <!--Dropdown Artist List-->
     <div class="form-group">
-        <label> SongID </label>
+        <label> <b> Artist </b> </label>
+        <select [(ngModel)]="song.artistId" formControlName="artistId" style="width: 100%;">
+            <option *ngFor="let artist of artists" [value]="artist.id">
+                {{artist.name}}
+            </option>
+        </select>
+    </div>
+    Can't find the artist? Add them <a routerLink="/add-artist" style="color:#BF40BF;"> here </a> <br>
+    <div class="form-group" [hidden]="hide">
+        <label> <b> Song </b> </label>
         <input 
         type="text" 
         class="form-control"
         formControlName="id"
+        [ngModel]="song.id"
         /> 
     </div>
     <div class="form-group">
-        <label> ArtistID </label>
+        <label> <b> Title </b> </label>
         <input 
         type="text" 
         class="form-control"
-        formControlName="artistId"
-        /> 
+        formControlName="title"
+        [ngModel]="song.title"/> 
     </div>
     <div class="form-group">
-        <label> Title </label>
-        <input 
-        type="text" 
-        class="form-control"
-        formControlName="title"/> 
-    </div>
-    <div class="form-group">
-        <label> Album </label>
+        <label> <b> Album </b></label>
         <input
         class="form-control" 
+        [ngModel]="song.album"
         formControlName="album"/>
     </div>
     <div class="form-group">
-        <label> Lyrics </label>
+        <label> <b> Lyrics </b> </label>
         <textarea 
         class="form-control" 
-        rows="3" formControlName="lyrics"></textarea>
+        [ngModel]="song.lyrics"
+        rows="10" formControlName="lyrics"></textarea>
     </div>
     <hr />
     <!--move delete here-->

@@ -5,9 +5,9 @@
       <blockquote class="blockquote text-center">
         <h4>{{song.title}}</h4>
         <!-- get artist name by ID-->
-        <h6>{{song.artistId}}</h6>
+        <h6>Artist: {{song.artistName}}</h6>
         <h6>{{song.album}}</h6>
-        <p class="mb-0">{{song.lyrics}}</p>
+        <p class="mb-0"[innerHTML]="formattedLyrics"></p>
       </blockquote>
     </div>
     <br>

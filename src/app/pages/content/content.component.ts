@@ -12,12 +12,14 @@ export class ContentComponent implements OnInit {
   id: any;
   isAdmin: boolean;
   role:any;
+  public formattedLyrics: string;
   
   song: Songs = {
     artistId: 0,
     title: "",
     album: "", 
-    lyrics: ""
+    lyrics: "",
+    artistName: ""
   }
 
   constructor(
@@ -32,7 +34,7 @@ export class ContentComponent implements OnInit {
     this.songsService.getSong(this.id).subscribe((s) => {
       this.song = s;
 
-      //get artist name by id
+      this.formattedLyrics=this.song.lyrics.replace(/\n/g,"<br>");
 
       this.isAuthorized();
     })
