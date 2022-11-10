@@ -22,6 +22,7 @@ export class AddSongComponent implements OnInit {
   artists: Artist [] = [];
   songsForm: FormGroup;
   song: Songs;
+  formMessage: string = "";
 
   ngOnInit() {
 
@@ -48,10 +49,19 @@ export class AddSongComponent implements OnInit {
   ) { }
 
   submitSong() {
+    this.validateForm();
     this.songsService.saveSongs(this.songsForm.value).subscribe(res => {
       console.log('Song has been added!')
       this.router.navigateByUrl('/index')
     })
+  }
+
+  validateForm(){
+    let s = this.songsForm.value;
+    if (this.songsForm.untouched || s.artistId == "" || s.title == "" || s.lyrics == "")
+    {
+      this.formMessage = "Incomplete song details!"
+    }
   }
 
 }  

@@ -51,4 +51,10 @@ export class CommentsService {
       return this.http.put<Comments>(url, comments, httpOptions);
     }
   }
+
+  deleteComment(comment: Comments): Observable<Comments> {
+    console.log("Deleting comment..");
+    const url = `${this.apiUrl}/comments/${comment.id}`;
+    return this.http.delete<Comments>(url);
+  }
 }

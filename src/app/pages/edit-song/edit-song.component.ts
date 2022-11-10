@@ -18,6 +18,7 @@ export class EditSongComponent implements OnInit {
     id: any;
     song: Songs;
     hide: boolean = true;
+    formMessage: string = "";
 
     songs: Songs [] = [];
 
@@ -66,10 +67,19 @@ this.artistsService.getArtists().subscribe((data: Artist[])=>{
   
 
   editSong() {
+    this.validateForm();
     this.songsService.saveSongs(this.songsForm.value).subscribe(res => {
       console.log('Song has been edited for songID:' + this.id);
       this.router.navigateByUrl('/content/' + this.id);
   })
+}
+
+validateForm(){
+  let s = this.songsForm.value;
+  if (this.songsForm.untouched || s.artistId == "" || s.title == "" || s.lyrics == "")
+  {
+    this.formMessage = "Incomplete song details!"
+  }
 }
 
 }

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddSongComponent } from './pages/add-song/add-song.component';
 import { ArtistsComponent } from './pages/artists/artists.component';
 import { ContentComponent } from './pages/content/content.component';
+import { EditArtistComponent } from './pages/edit-artist/edit-artist.component';
 import { EditSongComponent } from './pages/edit-song/edit-song.component';
 import { IndexComponent } from './pages/index/index.component';
 import { ListOfArtistsComponent } from './pages/list-of-artists/list-of-artists.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'add-artist', component: ArtistsComponent },
+  { path: 'edit-artist', component: EditArtistComponent },
   { path: 'list-of-artists', component: ListOfArtistsComponent}
 ];
 

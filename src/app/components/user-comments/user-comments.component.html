@@ -1,11 +1,19 @@
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <div class="card">
    <div class="mt-4"></div>
 <ul class="list group" *ngFor="let c of comment">  
    <li class="list-group-item">
-    <b> UserId: {{c.userId}} </b>
+   <!-- <i style='font-size:24px' class='far'>&#xf2bd;</i> -->
+    <b>  {{c.username}} </b>
     <p> User Rating: {{c.rating}} </p>
     <p> {{c.content}} </p>
-    <!--<button type="button" class="btn btn-outline-danger">Delete</button>-->
+    <!-- <button 
+    id="delete-comment-button" 
+    type="button" 
+    class="btn btn-outline-danger" 
+    (click)="performDelete()">
+    Delete
+   </button> -->
    </li> 
    <hr/>  
 </ul>    

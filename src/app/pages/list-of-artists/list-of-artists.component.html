@@ -9,11 +9,14 @@
 </div>
 <div class="mt-4"></div>
 <div class="container">
-
-
+    <div class="center">
+        <div *ngIf="isLoggedIn">
+        <button type="button" class="btn btn-outline-success"><a class="nav-link" routerLink="/add-artist"> Add Artist </a> </button>
+        <div class="mt-4"></div>
+        </div>
 <div class="mt-4"></div>
 <ul class="list-group" *ngFor="let artist of artists">
-    <li class="list-group-item">
+    <li class="list-group-item" style="border: 0mm;">
             <h5 style="color:#BF40BF;">{{artist.name}}</h5>
             <!-- <button class="btn btn-outline-success">
                 Edit
@@ -24,5 +27,9 @@
 
     </li>
 </ul>
-<p *ngIf="isLoggedIn"> Can't find your artist? Add them <a  routerLink="/add-artist" style="color:#FA5F55;">here.</a></p>
+<div class="center">
+<div *ngIf="isLoggedIn">
+<button *ngIf="isAdmin" type="button" class="btn btn-outline-info"><a class="nav-link" routerLink="/edit-artist"> Edit Artist </a> </button>
+<div class="mt-4"></div>
+</div>
 </div>

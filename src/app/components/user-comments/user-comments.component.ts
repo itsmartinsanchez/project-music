@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {Comments} from '../../interfaces/comments';
 import { Users } from '../../interfaces/users';
 import {Songs} from '../../interfaces/songs';
@@ -13,10 +13,15 @@ import { ThisReceiver } from '@angular/compiler';
   styleUrls: ['./user-comments.component.scss']
 })
 export class UserCommentsComponent implements OnInit {
+  @Input() com: Comments;
+  @Output() deleteEvent: EventEmitter<number> = new EventEmitter<number>();
+  commentId: any;
   id: any;
   userId: any;
   username: any;
   songId: any;
+
+  
   
   comment: Comments[] = [];
   user: Users[] = [];
@@ -37,8 +42,7 @@ export class UserCommentsComponent implements OnInit {
       console.log(c);
       this.comment = c;
     })
-    //this.getUsername();
-
+    this.commentId = this.comment
 
   }
 
@@ -56,7 +60,18 @@ export class UserCommentsComponent implements OnInit {
 
   }
 
+  handleDelete(id: number): void {
+    this.deleteEvent.emit(id);
+  }
 
-  //show delete button if currentUserId = userId comment
+  //show delete button
+  performDelete(): void
+  {
+    console.log("Deleting..");
+    this.commentsService.deleteComment(this.com).subscribe((msg) =>{
+    this.deleteEvent.emit(this.com.id);
+    this.router.navigateByUrl('/index')
+    });
+  }
 
 }

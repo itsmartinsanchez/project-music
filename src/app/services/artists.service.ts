@@ -27,6 +27,12 @@ export class ArtistsService {
     return this.http.get<Artist[]>(this.apiUrl);
   }
 
+  deleteArtist(id: number): Observable<string> {
+    console.log("Deleting artist..")
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.delete<string>(url);
+  }
+
   saveArtist(artists: Artist): Observable<Artist>{
     const url = `${this.apiUrl}`
 
@@ -36,6 +42,7 @@ export class ArtistsService {
     }
     else{
       console.log("Updating artist name..");
+      const url = `${this.apiUrl}/${artists.id}`
       return this.http.put<Artist>(url, artists, httpOptions);
     }
   }

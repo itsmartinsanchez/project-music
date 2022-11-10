@@ -1,3 +1,4 @@
+<div class="mt-4"></div>
 <div class="container-lg">
   <div class="center">
     <!-- Don't use ngfor. Selection of certain song -->
@@ -13,12 +14,12 @@
     <br>
     <div class="btn-right">
         <button 
-        class="btn btn-primary" 
+        class="btn btn-outline-success" 
         *ngIf="isAdmin">
           <a class="nav-link" routerLink="edit/">Edit</a>
         </button>
         <button 
-        class="btn btn-danger" 
+        class="btn btn-outline-danger" 
         *ngIf="isAdmin" 
         (click)="deleteSong(id)">
           Delete
@@ -27,3 +28,5 @@
 </div>        
 </div>
 <app-comments></app-comments>
+<div class="mt-5"></div>
+<br><br><br>

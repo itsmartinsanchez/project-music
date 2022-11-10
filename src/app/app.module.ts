@@ -21,6 +21,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ArtistsComponent } from './pages/artists/artists.component';
 import { ListOfArtistsComponent } from './pages/list-of-artists/list-of-artists.component';
+import { EditArtistComponent } from './pages/edit-artist/edit-artist.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ListOfArtistsComponent } from './pages/list-of-artists/list-of-artists.
     LoginComponent,
     RegisterComponent,
     ArtistsComponent,
-    ListOfArtistsComponent
+    ListOfArtistsComponent,
+    EditArtistComponent
   ],
   imports: [
     BrowserModule,

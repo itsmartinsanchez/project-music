@@ -10,7 +10,8 @@ import {Router} from "@angular/router";
 })
 
 export class ListOfArtistsComponent implements OnInit {
-
+  isAdmin: boolean;
+  role:any;
   artists: Artist[] = [];
   token:null;
   isLoggedIn: boolean;
@@ -24,6 +25,7 @@ export class ListOfArtistsComponent implements OnInit {
       console.log(data);
       this.artists = data;
       this.isAuthenticated();
+      this.isAuthorized();
     })
   }
 
@@ -38,6 +40,19 @@ export class ListOfArtistsComponent implements OnInit {
     }
     else{
       return this.isLoggedIn = true;
+    }
+  }
+
+  //check user if can edit and delete
+  isAuthorized(){
+    var listdata= JSON.parse(localStorage.getItem("dataKey") || '{}');
+    const valueRole= listdata.role;
+    this.role=valueRole;
+    if (this.role == "admin"){
+      return this.isAdmin = true; 
+    }
+    else{
+      return this.isAdmin = false;
     }
   }
 

@@ -4,4 +4,5 @@ export interface Comments{
     userId: number;
     rating: number;
     content: string;
+    username: string;
 }
